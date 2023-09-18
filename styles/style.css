@@ -16,7 +16,9 @@ body {
 }
 
 .app__container {
-  background: var(--Blue-to-White);
+  background: url("/src/img/background.jpeg");
+  background-position: center;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -72,15 +74,15 @@ form input {
   border: 1px solid rgba(223, 104, 0, 0.571);
   background: rgba(92, 182, 251, 0.386);
   padding-left: 1rem;
-  color: white;
+  color: black;
   outline: none;
 }
 form input::-moz-placeholder {
-  color: white;
+  color: black;
   opacity: 0.8;
 }
 form input::placeholder {
-  color: white;
+  color: black;
   opacity: 0.8;
 }
 form button {
