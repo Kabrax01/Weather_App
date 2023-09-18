@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Weather App</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="app__container">
+        <div class="app">
+          <form action="" class="find__form">
+            <input
+              type="text"
+              placeholder="Wpisz miejscowość"
+              class="find__form--input"
+            />
+            <button class="find__form--btn">
+              <img
+                src="./src/img/search__icon.svg"
+                alt="location search icon"
+              />
+            </button>
+          </form>
+          <div class="app__main">
+            <span class="app__main--span">Wybierz jedną z opcji</span>
+          </div>
+          <button type="submit" class="myLoc__btn">Moja lokalizacja</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

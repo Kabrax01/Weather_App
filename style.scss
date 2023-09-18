@@ -1,0 +1,93 @@
+@use "./src/sass/mixins" as mix;
+:root {
+  --Blue-to-White: linear-gradient(
+    122deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(223, 104, 0, 1) 100%
+  );
+  --Btn: rgb(215, 140, 53);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+}
+
+.app__container {
+  background: var(--Blue-to-White);
+  height: 100vh;
+  width: 100vw;
+  @include mix.flexBox();
+}
+
+.app {
+  @include mix.flexBox(column);
+}
+
+.app__main {
+  @include mix.flexBox(column);
+  padding: 2rem 2rem;
+
+  &--img {
+    height: 7rem;
+  }
+
+  &--temperature {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+
+  &--location {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &--span {
+    text-align: center;
+  }
+}
+
+form {
+  @include mix.flexBox();
+
+  input {
+    height: 2.2rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(223, 104, 0, 0.571);
+    background: rgba(92, 182, 251, 0.386);
+    padding-left: 1rem;
+    color: white;
+    outline: none;
+
+    &::placeholder {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+
+  button {
+    @include mix.flexBox();
+    height: 2.375rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--Btn);
+  }
+}
+
+.myLoc__btn {
+  padding: 0.5rem 2rem;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  background: var(--Btn);
+}
