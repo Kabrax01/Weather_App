@@ -16,7 +16,7 @@ body {
 }
 
 .app__container {
-  background: url(./src/img/background.jpeg);
+  background: url(../src/img/background.jpeg);
   background-position: center;
   background-size: cover;
   height: 100vh;
