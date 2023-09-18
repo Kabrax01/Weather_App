@@ -32,6 +32,8 @@ const handleError = function (msg) {
 const currentLocationWeather = function () {
   isOnline();
   if (!online) return;
+
+  input.value = "";
   navigator.geolocation.getCurrentPosition((loc) => {
     console.log(loc);
     lat = loc.coords.latitude;
