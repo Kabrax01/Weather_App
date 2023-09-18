@@ -20,6 +20,10 @@ const isOnline = function () {
   }
 };
 
+const descrUpper = function (string) {
+  return string[0].toUpperCase() + string.slice(1);
+};
+
 const handleError = function (msg) {
   mainApp.innerHTML = `
   <span class="app__main--span">${msg}</span>`;
@@ -46,15 +50,18 @@ const currentLocationWeather = function () {
         console.log(data);
 
         const location = data.name;
-        const img = data.weather[0].icon;
+        const { icon, description } = data.weather[0];
         const temp = Math.floor(data.main.temp);
         const hpa = Math.floor(data.main.pressure);
+
+        const upperDesc = descrUpper(description);
 
         mainApp.innerHTML = `
           <p class="app__main--location">${location}</p>
           <img class="app__main--img"
-          src=http://openweathermap.org/img/w/${img}.png >
+          src=http://openweathermap.org/img/w/${icon}.png >
           <p class="app__main--temperature">${temp} &#8451;</p>
+          <p class="app__main--pressure">${upperDesc}</p>
           <p class="app__main--pressure">Ciśnienie: ${hpa} &#13169;</p>`;
       })
       .catch((err) => {
@@ -106,11 +113,14 @@ const searchLocationWeather = function (e) {
           const temp = Math.floor(data.main.temp);
           const hpa = Math.floor(data.main.pressure);
 
+          const upperDesc = descrUpper(description);
+
           mainApp.innerHTML = `
           <p class="app__main--location">${location}</p>
           <img class="app__main--img"
           src=http://openweathermap.org/img/w/${icon}.png >
           <p class="app__main--temperature">${temp} &#8451;</p>
+          <p class="app__main--pressure">${upperDesc}</p>
           <p class="app__main--pressure">Ciśnienie: ${hpa} &#13169;</p>`;
         })
         .catch((err) => {

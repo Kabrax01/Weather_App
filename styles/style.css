@@ -48,6 +48,7 @@ body {
 }
 .app__main p {
   margin: 0.25rem 0;
+  text-align: center;
 }
 .app__main--location {
   font-weight: 600;
