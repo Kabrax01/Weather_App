@@ -5,7 +5,7 @@ import {
   wait,
   firstLoad,
   changeFirstLoad,
-} from "/index.js";
+} from "../../index.js";
 import { displayWeather } from "./DisplayWeather.js";
 
 ("use strict");

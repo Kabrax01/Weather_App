@@ -1,4 +1,4 @@
-import { descrUpper } from "/index.js";
+import { descrUpper } from "../../index.js";
 
 ("use strict");
 
