@@ -17,7 +17,6 @@ body {
 }
 
 .app__container {
-  // background: var(--Blue-to-White);
   background: url(../src/img/background.jpeg);
   background-position: center;
   background-size: cover;
@@ -28,11 +27,17 @@ body {
 
 .app {
   @include mix.flexBox(column);
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  max-width: 90vw;
 }
 
 .app__main {
   @include mix.flexBox(column);
   padding: 2rem 2rem;
+  min-height: 1rem;
+  transition: all 1s;
 
   &--img {
     height: 7rem;
