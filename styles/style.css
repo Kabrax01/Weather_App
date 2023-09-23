@@ -16,10 +16,11 @@ body {
 }
 
 .app__container {
+  overflow: hidden;
   background: url(../src/img/background.jpeg);
   background-position: center;
-  background-size: cover;
-  height: 100vh;
+  background-size: auto;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -45,8 +46,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem 2rem;
-  min-height: 1rem;
+  min-height: 3rem;
   transition: all 1s;
+  max-width: 95vw;
 }
 .app__main--img {
   height: 7rem;
@@ -66,6 +68,26 @@ body {
 }
 .app__main--span {
   text-align: center;
+}
+
+.app_main__forecast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  width: 90vw;
+  overflow-y: scroll;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.app_main__forecast div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 40%;
 }
 
 form {

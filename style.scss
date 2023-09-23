@@ -17,10 +17,11 @@ body {
 }
 
 .app__container {
+  overflow: hidden;
   background: url(../src/img/background.jpeg);
   background-position: center;
-  background-size: cover;
-  height: 100vh;
+  background-size: auto;
+  min-height: 100vh;
   width: 100vw;
   @include mix.flexBox();
 }
@@ -36,8 +37,9 @@ body {
 .app__main {
   @include mix.flexBox(column);
   padding: 2rem 2rem;
-  min-height: 1rem;
+  min-height: 3rem;
   transition: all 1s;
+  max-width: 95vw;
 
   &--img {
     height: 7rem;
@@ -61,6 +63,21 @@ body {
 
   &--span {
     text-align: center;
+  }
+}
+
+.app_main__forecast {
+  @include mix.flexBox();
+  justify-content: flex-start;
+  width: 90vw;
+  overflow-y: scroll;
+  font-size: 1rem;
+  margin-top: 2rem;
+
+  div {
+    padding: 0.5rem;
+    @include mix.flexBox(column);
+    min-width: 40%;
   }
 }
 

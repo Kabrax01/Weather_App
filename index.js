@@ -7,6 +7,7 @@ const form = document.querySelector(".find__form");
 const locBtn = document.querySelector(".myLoc__btn");
 const mainApp = document.querySelector(".app__main");
 
+// NOTE: You do not need to do exports in this index, its not imported anywhere
 export let online = true,
   firstLoad = true;
 
@@ -30,6 +31,7 @@ export const handleError = function (msg) {
 };
 
 export const wait = async (sec) => {
+  mainApp.innerHTML = "";
   mainApp.style.minHeight = "25rem";
   await new Promise((resolve) => setTimeout(resolve, 1000 * sec));
 };
@@ -40,9 +42,3 @@ export const changeFirstLoad = (boolean) => {
 
 locBtn.addEventListener("click", currentLocationWeather);
 form.addEventListener("submit", searchLocationWeather);
-
-const date = new Date(1661943600).toLocaleString("pl-PL", {
-  weekday: "short",
-});
-
-console.log(date);

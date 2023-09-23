@@ -1,4 +1,5 @@
 import { descrUpper } from "../../index.js";
+import { displayForecast } from "./Forecast.js";
 
 ("use strict");
 
@@ -15,8 +16,13 @@ export const displayWeather = function (data) {
   mainApp.innerHTML = `
       <p class="app__main--location">${location}</p>
       <img class="app__main--img"
-      src=http://openweathermap.org/img/w/${icon}.png >
+      src=https://openweathermap.org/img/w/${icon}.png >
       <p class="app__main--temperature">${temp} &#8451;</p>
-      <p class="app__main--pressure">${description}</p>
-      <p class="app__main--pressure">Ciśnienie: ${hpa} &#13169;</p>`;
+      <p class="app__main--description">${description}</p>
+      <p class="app__main--pressure">Ciśnienie: ${hpa} &#13169;</p>
+      <div class="app_main__forecast"></div>`;
+
+  const { lon, lat } = data.coord;
+
+  displayForecast(lat, lon);
 };

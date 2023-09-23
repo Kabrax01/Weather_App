@@ -7,6 +7,7 @@ import {
   changeFirstLoad,
 } from "../../index.js";
 import { displayWeather } from "./DisplayWeather.js";
+import { displayForecast } from "./Forecast.js";
 
 ("use strict");
 
@@ -37,10 +38,12 @@ export const currentLocationWeather = async function () {
     if (!pos.ok) throw new Error(`Coś poszło nie tak...`);
     // prettier-ignore
     const data = await pos.json();
+
     if (firstLoad) await wait(1);
     displayWeather(data);
     changeFirstLoad(false);
   } catch (err) {
+    console.error(err);
     handleError(`${err.message}`);
   }
 };
