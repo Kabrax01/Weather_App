@@ -149,4 +149,8 @@ form button {
   -webkit-background-clip: text;
   width: 90vw;
   text-transform: uppercase;
+}
+
+.secret {
+  font-size: 5rem;
 }/*# sourceMappingURL=style.css.map */

@@ -20,6 +20,13 @@ export const searchLocationWeather = async function (e) {
   isOnline();
   if (!online) return;
 
+  if (input.value == "Kasia Rogalska" || input.value == "Karolina Wilk") {
+    mainApp.innerHTML = `
+    <span class="app__main--span starter__message">DLA CIEBIE ZAWSZE BĘDZIE ŚWIECIĆ SŁOŃCE </span><span class="secret">❣️</span>`;
+    mainApp.style.minHeight = "35rem";
+    return;
+  }
+
   const location = input.value;
   try {
     const loc = await fetch(
