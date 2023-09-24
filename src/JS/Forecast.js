@@ -10,12 +10,10 @@ function getDayName(dateStr) {
 export const displayForecast = async function (lat, lon) {
   const forecastContainer = document.querySelector(".app_main__forecast");
 
-  const testPos = await fetch(
+  const pos = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=0c819458245a8fe5fe149f4ee63f7baf&units=metric&lang=pl`
   );
-  const testData = await testPos.json();
-
-  console.log(testData);
+  const data = await pos.json();
 
   const today = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
@@ -26,15 +24,13 @@ export const displayForecast = async function (lat, lon) {
 
   let daily = [];
 
-  testData.list.filter((pos) => {
+  data.list.filter((pos) => {
     const hour = pos.dt_txt.split(" ")[1];
-    const dateF = pos.dt_txt.split(" ")[0];
-    if (hour == "15:00:00" && dateF !== date) {
+    const dataDate = pos.dt_txt.split(" ")[0];
+    if (hour == "15:00:00" && dataDate !== date) {
       daily.push(pos);
     }
   }, date);
-
-  console.log(daily);
 
   daily.forEach((day) => {
     const dayString = day.dt_txt.split(" ")[0];
