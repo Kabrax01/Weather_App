@@ -15,14 +15,14 @@ export const displayForecast = async function (lat, lon) {
   );
   const testData = await testPos.json();
 
+  console.log(testData);
+
   const today = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
   const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   const yyyy = today.getFullYear();
 
   const date = `${yyyy}-${mm}-${dd}`;
-
-  const curHour = testData.list[0].dt_txt.split(" ")[1];
 
   let daily = [];
 
@@ -34,6 +34,8 @@ export const displayForecast = async function (lat, lon) {
     }
   }, date);
 
+  console.log(daily);
+
   daily.forEach((day) => {
     const dayString = day.dt_txt.split(" ")[0];
     const dayName = descrUpper(getDayName(dayString).slice(0, -1));
@@ -42,7 +44,7 @@ export const displayForecast = async function (lat, lon) {
     const html = `
     <div>
         <p class="app__main__forecast--day">${dayName}</p>
-        <p class="app__main__forecast--temperature">23 &#8451;</p>
+        <p class="app__main__forecast--temperature">${temp} &#8451;</p>
         <img class="app__main__forecast--img"
         src=https://openweathermap.org/img/w/${icon}.png >
         <p class="app__main--description">${desc}</p>
