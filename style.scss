@@ -99,7 +99,8 @@ form {
 
     &::placeholder {
       color: black;
-      opacity: 0.8;
+      opacity: 0.5;
+      font-family: inherit;
     }
   }
 
@@ -128,6 +129,7 @@ form {
   background-image: var(--Blue-to-White);
   background-size: cover;
   background-clip: text;
+  -webkit-background-clip: text;
   width: 90vw;
   text-transform: uppercase;
 }
