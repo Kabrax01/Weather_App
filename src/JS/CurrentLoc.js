@@ -7,7 +7,6 @@ import {
   changeFirstLoad,
 } from "../../index.js";
 import { displayWeather } from "./DisplayWeather.js";
-import { displayForecast } from "./Forecast.js";
 
 ("use strict");
 

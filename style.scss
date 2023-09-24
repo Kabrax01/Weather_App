@@ -84,10 +84,6 @@ body {
   }
 }
 
-// .app__main__forecast--day {
-//   background: black;
-// }
-
 form {
   @include mix.flexBox();
 
@@ -123,4 +119,15 @@ form {
   border-radius: 5px;
   border: none;
   background: var(--Btn);
+}
+
+.starter__message {
+  font-weight: 900;
+  font-size: 2rem;
+  color: transparent;
+  background-image: var(--Blue-to-White);
+  background-size: cover;
+  background-clip: text;
+  width: 90vw;
+  text-transform: uppercase;
 }

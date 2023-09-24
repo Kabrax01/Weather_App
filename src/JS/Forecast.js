@@ -3,7 +3,7 @@ import { descrUpper } from "../../index.js";
 ("use strict");
 
 function getDayName(dateStr) {
-  var date = new Date(dateStr);
+  const date = new Date(dateStr);
   return date.toLocaleDateString("pl-PL", { weekday: "short" });
 }
 
