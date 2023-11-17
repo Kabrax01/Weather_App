@@ -5,8 +5,8 @@
 ## Screenshots
 
 <p display="flex">
-<img src="/img/ss_WA_1.png" width="300">
-<img src="/img/ss_WA_2.png" width="300">
+<img src="/src/img/ss_WA_1.png" width="300">
+<img src="/src/img/ss_WA_2.png" width="300">
 </p>
 
 ## Built with
