@@ -156,7 +156,7 @@ form button {
   font-size: 5rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   main {
     display: flex;
     flex-direction: row;
@@ -168,7 +168,7 @@ form button {
     width: 35rem;
   }
   .app_main__forecast {
-    min-width: 95%;
+    max-width: 95vw;
     overflow-y: hidden;
   }
   .app_main__forecast::-webkit-scrollbar {

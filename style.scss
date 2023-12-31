@@ -139,7 +139,7 @@ form {
   font-size: 5rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   main {
     @include mix.flexBox();
     background: radial-gradient(
@@ -154,7 +154,7 @@ form {
   }
 
   .app_main__forecast {
-    min-width: 95%;
+    max-width: 95vw;
     overflow-y: hidden;
     &::-webkit-scrollbar {
       height: 0.5rem;
