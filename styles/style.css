@@ -1,183 +1,222 @@
 :root {
-  --Blue-to-White: linear-gradient(
-    122deg,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(223, 104, 0, 1) 100%
-  );
-  --Btn: rgb(215, 140, 53);
+    --Blue-to-White: linear-gradient(
+        122deg,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(223, 104, 0, 1) 100%
+    );
+    --Btn: rgb(215, 140, 53);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
 }
 
 .app__container {
-  overflow: hidden;
-  background: url(../src/img/background.jpeg);
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border-radius: 10px;
-  width: 90%;
-}
-
-.app__main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0.2rem;
-  min-height: 3rem;
-  transition: all 1s;
-  max-width: 95%;
-}
-.app__main--img {
-  height: 7rem;
-}
-.app__main--temperature {
-  font-size: 2rem;
-  font-weight: 800;
-}
-.app__main p {
-  margin: 0.25rem 0;
-  text-align: center;
-}
-.app__main--location {
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-}
-.app__main--span {
-  text-align: center;
-}
-
-.app_main__forecast {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  justify-content: flex-start;
-  overflow-y: scroll;
-  font-size: 1rem;
-  margin-top: 2rem;
-}
-.app_main__forecast div {
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 40%;
-  border: 1px solid white;
-  border-radius: 15px;
-  height: 11rem;
-}
-
-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-form input {
-  height: 2.2rem;
-  margin-right: 1rem;
-  border-radius: 5px;
-  border: 1px solid rgba(223, 104, 0, 0.571);
-  background: rgba(92, 182, 251, 0.386);
-  padding-left: 1rem;
-  color: black;
-  outline: none;
-}
-form input::-moz-placeholder {
-  color: black;
-  opacity: 0.5;
-  font-family: inherit;
-}
-form input::placeholder {
-  color: black;
-  opacity: 0.5;
-  font-family: inherit;
-}
-form button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 2.375rem;
-  border-radius: 5px;
-  border: none;
-  background: var(--Btn);
-}
-
-.myLoc__btn {
-  padding: 0.5rem 2rem;
-  font-family: inherit;
-  font-weight: 700;
-  border-radius: 5px;
-  border: none;
-  background: var(--Btn);
-}
-
-.starter__message {
-  font-weight: 900;
-  font-size: 2rem;
-  color: transparent;
-  background-image: var(--Blue-to-White);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  width: 90vw;
-  text-transform: uppercase;
-}
-
-.secret {
-  font-size: 5rem;
-}
-
-@media screen and (max-width: 600px) {
-  main {
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, rgb(34, 193, 195) 58%, rgb(253, 191, 45) 100%);
-  }
-  .app__container {
-    width: 35rem;
-  }
-  .app_main__forecast {
-    max-width: 95vw;
-    overflow-y: hidden;
-  }
-  .app_main__forecast::-webkit-scrollbar {
-    height: 0.5rem;
-  }
-  .app_main__forecast::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  .app_main__forecast::-webkit-scrollbar-thumb {
-    background: white;
-  }
-}/*# sourceMappingURL=style.css.map */
+    overflow: hidden;
+    background: url(../src/img/background.jpeg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 90%;
+}
+
+.app__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0.2rem;
+    min-height: 3rem;
+    transition: all 1s;
+    max-width: 95%;
+}
+.app__main--img {
+    height: 7rem;
+}
+.app__main--temperature {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.app__main p {
+    margin: 0.25rem 0;
+    text-align: center;
+}
+.app__main--location {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+.app__main--span {
+    text-align: center;
+}
+
+.app_main__forecast {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+.app_main__forecast div {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 40%;
+    border: 1px solid white;
+    border-radius: 15px;
+    height: 11rem;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+form input {
+    height: 2.2rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(223, 104, 0, 0.571);
+    background: rgba(92, 182, 251, 0.386);
+    padding-left: 1rem;
+    color: black;
+    outline: none;
+}
+form input::-moz-placeholder {
+    color: black;
+    opacity: 0.5;
+    font-family: inherit;
+}
+form input::placeholder {
+    color: black;
+    opacity: 0.5;
+    font-family: inherit;
+}
+form button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 2.375rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--Btn);
+}
+
+.myLoc__btn {
+    padding: 0.5rem 2rem;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    background: var(--Btn);
+}
+
+.starter__message {
+    font-weight: 900;
+    font-size: 2rem;
+    color: transparent;
+    background-image: var(--Blue-to-White);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: 90vw;
+    text-transform: uppercase;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #ff3d00;
+    border-left: 4px solid transparent;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.secret {
+    font-size: 5rem;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(
+            circle,
+            rgb(34, 193, 195) 58%,
+            rgb(253, 191, 45) 100%
+        );
+    }
+    .app__container {
+        width: 35rem;
+    }
+    .app_main__forecast {
+        max-width: 95vw;
+        overflow-y: hidden;
+    }
+    .app_main__forecast::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+    .app_main__forecast::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .app_main__forecast::-webkit-scrollbar-thumb {
+        background: white;
+    }
+} /*# sourceMappingURL=style.css.map */
