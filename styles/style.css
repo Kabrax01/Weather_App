@@ -85,7 +85,9 @@ button {
     overflow-y: scroll;
     font-size: 1rem;
     margin-top: 2rem;
+    width: 100%;
 }
+
 .app_main__forecast div {
     margin: 0.5rem;
     display: flex;
@@ -178,6 +180,7 @@ form button {
     border-bottom: 4px solid #ff3d00;
     border-left: 4px solid transparent;
 }
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -207,7 +210,7 @@ form button {
         width: 35rem;
     }
     .app_main__forecast {
-        max-width: 95vw;
+        width: 100%;
         overflow-y: hidden;
     }
     .app_main__forecast::-webkit-scrollbar {
